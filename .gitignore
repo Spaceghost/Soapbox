@@ -1,22 +1,39 @@
-.bundle
-db/*.sqlite3
-log/*.log
-tmp/
-.sass-cache/
+# Individual files
 config/database.yml
 config/s3_credentials.yml
-*~
-*.cache
-*.log
-*.pid
-tmp/**/*
-.DS_Store
+.bundle
+
+# Directories
+tmp/
+.sass-cache/
+
+# Database
+db/*.sqlite3
+log/*.log
 db/cstore/**
 db/sphinx/**
+
+# Documentation
 doc/api
 doc/app
 doc/plugins
 doc/*.dot
+
+# Testing
 coverage/*
+
+# Filetypes
+*~
+*.cache
+*.log
+*.pid
+.DS_Store
 *.tmproj
 *.swp
+*.rbc
+*.sassc
+*.sass-cache
+capybara-*.html
+.rspec
+*.orig
+
