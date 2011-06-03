@@ -1,0 +1,9 @@
+<header><h2>Authors (<%= @users.count %>)</h2></header>
+  <div>
+    <% @users.each do |user| %>
+    <p><%= link_to "#{user.name}", "/#{user.name}" %></p>
+    <% end %>
+  </div>
+  <p><%= link_to "Become an author", register_path %> or check out the <%= link_to "articles", articles_path %>.</p>
+</section>
+

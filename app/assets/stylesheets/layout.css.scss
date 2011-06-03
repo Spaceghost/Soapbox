@@ -14,19 +14,26 @@ body {
   font-size: 14px;
 }
 
-#header {
+hgroup {
   background-color: $main-color;
   color: #FFF;
   padding: 4px 100px;
   border-bottom: solid 5px darken($main-color, 10%);
-
   h1 {
     font-size: 30px;
+  }
+
+  a {
+    color: white;
+    text-decoration: none;
+    &:hover {
+      color: yellow;
+    }
   }
 }
 
 a {
-  color: $main-color;
+  color: black;
   text-decoration: none;
   &:hover {
     text-decoration: underline;
@@ -35,5 +42,11 @@ a {
 
 #container {
   margin: 0 100px;
+}
+
+footer {
+  position: absolute;
+  bottom: 0;
+  left: 0;
 }
 

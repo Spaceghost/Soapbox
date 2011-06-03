@@ -1,0 +1,3 @@
+module ArticleHelper
+end
+

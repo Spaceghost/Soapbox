@@ -1,0 +1,17 @@
+<section>
+<header><h2>Articles (<%= @articles.count %>)</h2></header>
+  <div>
+    <table>
+      <tr><th>Author</th><th>Title</th><th>Subtitle</th></tr>
+      <% @articles.each do |article| %>
+      <tr><td><%= article.user_id %></td><td><%= link_to "#{article.title}", author_article_path(article.user_id, article) %></td><td><%= article.subtitle %></td></tr>
+      <% end %>
+    </table>
+    <% if logged_in? %>
+    <p>Write a <%= link_to "new article", new_article_path(current_user.name) %> or check out the other <%= link_to "authors", users_path %>.</p>
+    <% else %>
+    <p><%= link_to "Register", register_path %> to write an article, or check out the <%= link_to "authors", users_path %>.</p>
+    <% end %>
+  </div>
+</section>
+
